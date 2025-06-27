@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    
+  schedule:
+    - cron: "*/5 * * * *"  # every 5 minutes  
 jobs:
   deploy:
     name: Upload to S3 and Invalidate CloudFront
